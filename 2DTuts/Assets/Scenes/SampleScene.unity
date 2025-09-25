@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 37027594}
+  playerAnimator: {fileID: 37027596}
 --- !u!95 &37027596
 Animator:
   serializedVersion: 5

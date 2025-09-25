@@ -5,15 +5,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
   [SerializeField] private Rigidbody2D playerRigidbody;
+  [SerializeField] private Animator playerAnimator;
     void Start()
     {
         
     }
 
-    void Update()
-    {
-      float horizontalMovement = Input.GetAxisRaw("Horizontal");
-      float verticalMovement = Input.GetAxisRaw("Vertical");
-        playerRigidbody.velocity = new Vector2 (horizontalMovement, verticalMovement);
+  void Update()
+  {
+    float horizontalMovement = Input.GetAxisRaw("Horizontal");
+    float verticalMovement = Input.GetAxisRaw("Vertical");
+    
+    playerRigidbody.velocity = new Vector2(horizontalMovement, verticalMovement);
+
+    playerAnimator.SetFloat("movementX", playerRigidbody.velocity.x);
+    playerAnimator.SetFloat("movementY", playerRigidbody.velocity.y);
     }
 }
