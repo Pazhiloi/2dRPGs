@@ -20,5 +20,12 @@ public class Player : MonoBehaviour
 
     playerAnimator.SetFloat("movementX", playerRigidbody.velocity.x);
     playerAnimator.SetFloat("movementY", playerRigidbody.velocity.y);
+
+    if (horizontalMovement == 1 || horizontalMovement == -1 || verticalMovement == 1 || verticalMovement == -1)
+    {
+      playerAnimator.SetFloat("lastX", horizontalMovement);
+      playerAnimator.SetFloat("lastY", verticalMovement);
     }
+    
+  }
 }
