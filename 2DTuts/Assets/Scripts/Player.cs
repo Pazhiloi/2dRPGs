@@ -6,10 +6,10 @@ public class Player : MonoBehaviour
 {
   [SerializeField] private int moveSpeed = 1;
   [SerializeField] private Rigidbody2D playerRigidbody;
-  [SerializeField] private Animator playerAnimator;
+  [SerializeField] private Animator playerAnimator; 
     void Start()
     {
-        
+        DontDestroyOnLoad(this);  
     }
 
   void Update()
