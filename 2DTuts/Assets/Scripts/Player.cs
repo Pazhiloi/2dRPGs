@@ -4,19 +4,34 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+  public static Player instance;
   [SerializeField] private int moveSpeed = 1;
   [SerializeField] private Rigidbody2D playerRigidbody;
-  [SerializeField] private Animator playerAnimator; 
-    void Start()
+  [SerializeField] private Animator playerAnimator;
+  void Start()
+  {
+    SingletonInit();
+    DontDestroyOnLoad(this);
+  }
+
+  private void SingletonInit()
+  {
+    if (instance != null && instance != this)
     {
-        DontDestroyOnLoad(this);  
+      Destroy(this.gameObject);
+
     }
+    else
+    {
+      instance = this;
+    }
+  }
 
   void Update()
   {
     float horizontalMovement = Input.GetAxisRaw("Horizontal");
     float verticalMovement = Input.GetAxisRaw("Vertical");
-    
+
     playerRigidbody.velocity = new Vector2(horizontalMovement, verticalMovement) * moveSpeed;
 
     playerAnimator.SetFloat("movementX", playerRigidbody.velocity.x);
@@ -27,6 +42,6 @@ public class Player : MonoBehaviour
       playerAnimator.SetFloat("lastX", horizontalMovement);
       playerAnimator.SetFloat("lastY", verticalMovement);
     }
-    
+
   }
 }
