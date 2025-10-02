@@ -176,8 +176,8 @@ PrefabInstance:
       value: Area Exit
       objectReference: {fileID: 0}
     - target: {fileID: 7882601547726081340, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
-      propertyPath: sceneToLoad
-      value: Town
+      propertyPath: transitionAreaName
+      value: Mountains - 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -288,6 +288,7 @@ MonoBehaviour:
   moveSpeed: 7
   playerRigidbody: {fileID: 37027594}
   playerAnimator: {fileID: 37027596}
+  transitionName: 
 --- !u!95 &37027596
 Animator:
   serializedVersion: 5
@@ -675,6 +676,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 827251037536391096, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.66
+      objectReference: {fileID: 0}
     - target: {fileID: 1571398883959881487, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -718,6 +723,18 @@ PrefabInstance:
     - target: {fileID: 7526856099614492204, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
       propertyPath: m_Name
       value: Area Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882601547726081340, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
+      propertyPath: sceneToLoad
+      value: Mountains
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882601547726081340, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
+      propertyPath: transitionName
+      value: Mountains - 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882601547726081340, guid: 264fca8ccacf2d84ba761e4d877308dc, type: 3}
+      propertyPath: transitionAreaName
+      value: Mountains - 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

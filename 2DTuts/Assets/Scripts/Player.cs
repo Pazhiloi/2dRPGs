@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
   [SerializeField] private int moveSpeed = 1;
   [SerializeField] private Rigidbody2D playerRigidbody;
   [SerializeField] private Animator playerAnimator;
+
+  public string transitionName;
   void Start()
   {
     SingletonInit();
