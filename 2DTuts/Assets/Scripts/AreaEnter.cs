@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AreaEnter : MonoBehaviour
 {
-  [SerializeField] string transitionAreaName;
+  public string transitionAreaName;
 
   private void Start() {
     if (transitionAreaName == Player.instance.transitionName)
